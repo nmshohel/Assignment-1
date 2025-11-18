@@ -54,7 +54,7 @@ type TBooks={
 }
 const filterByRating =(books:TBooks[]):TBooks[]=>{
     const topRatedBooks=books.filter((book)=>{
-        return book.rating>=4;
+        return book.rating>=4 && book.rating>=0 && book.rating<=5;
     })
     return topRatedBooks;
 }
@@ -129,3 +129,4 @@ const calculateTotalPrice =(products:Products[]):number=>{
 return totalPrice
 
 }
+
